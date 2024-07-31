@@ -1,0 +1,52 @@
+---
+layout: doctor
+---
+<section class="mt-15" id="api-container" 
+        data-urls='[
+            {% for api in collections.api %}
+                "{{ api.data.url }}"{{ "," if not loop.last }}
+            {% endfor %}
+        ]'>
+        <div id="doctor_list"></div>
+    </section>
+    <script>
+        const apiContainer = document.getElementById('api-container');
+        const apiUrls = JSON.parse(apiContainer.getAttribute('data-urls'));
+        async function apiCall(url){
+        fetch(url)
+        .then( res => {
+            return res.json()
+        })
+        .then(data => {
+            data.forEach(user => {
+                const doctor = document.createElement('h3')
+                doctor.classList.add('doctor');
+                doctor.textContent = user.name
+            document.getElementById('doctor_list').insertAdjacentElement('beforeend',doctor)
+            })
+        }).catch(error => console.log(error))
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+            apiUrls.forEach(url => {
+                apiCall(url);
+            });
+        });
+    </script>
+<style>
+    .mt-15 { margin-top: 15px; }
+#doctor_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px; /* Optional: add some space between items */
+}
+.doctor {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    margin: 5px; /* Adjust margin as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ddd; /* Optional: add a border */
+    border-radius: 5px; /* Optional: round the corners */
+    background-color: #f9f9f9; /* Optional: add a background color */
+}
+</style>

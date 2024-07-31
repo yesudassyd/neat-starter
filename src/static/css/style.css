@@ -1,0 +1,15 @@
+.mt-15 { margin-top: 15px; }
+#doctor_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px; /* Optional: add some space between items */
+}
+.doctor {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    margin: 5px; /* Adjust margin as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ddd; /* Optional: add a border */
+    border-radius: 5px; /* Optional: round the corners */
+    background-color: #f9f9f9; /* Optional: add a background color */
+}

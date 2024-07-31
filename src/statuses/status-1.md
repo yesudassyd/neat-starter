@@ -1,0 +1,4 @@
+---
+mood: mymood
+whatsonyourmind: mythought
+---

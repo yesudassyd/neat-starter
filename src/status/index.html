@@ -1,0 +1,25 @@
+---
+layout: status
+---
+<section class="mt-15">
+    {% set status = collections.status %}
+
+    {% for status in status | reverse %}
+        <article class="my-8">
+            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                <a href="{{ status.url | url }}">
+                    {% if status.data.mood %}
+                        {{ status.data.mood }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h2>
+            {% if status.data.whatsonyourmind %}
+                <p class="text-lg text-gray-500 mb-3">
+                    {{ status.data.whatsonyourmind }}
+                </p>
+            {% endif %}
+        </article>
+    {% endfor %}
+</section>
