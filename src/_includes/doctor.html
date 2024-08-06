@@ -1,33 +1,114 @@
----
-title: Our Doctors
----
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
-    {% block head %}{% endblock %}
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
-  </head>
-  <body>
-    
-  
-<div class="container max-w-3xl mt-6 px-6">
 
-    <h1 class="font-bold text-5xl">{{title}}</h1>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="twitter:title" content="PRAC360 is an easy-to-use appointment booking application that helps doctors and patients connect. With its secure, cloud-based platform, prac360 simplifies the process of scheduling and managing appointments. Get started today and simplify your practice">
+  <meta name ="twitter:description" content="PRAC360 is an easy-to-use appointment booking application that helps doctors and patients connect. With its secure, cloud-based platform, prac360 simplifies the process of scheduling and managing appointments. Get started today and simplify your practice">
+
+<meta property="og:description" content="PRAC360 is an easy-to-use appointment booking application that helps doctors and patients connect. With its secure, cloud-based platform, prac360 simplifies the process of scheduling and managing appointments. Get started today and simplify your practice">
+
+  <title>PRAC360 - is appointment booking application</title>
+  <meta name=”description” content=”PRAC360 is an easy-to-use appointment booking application that helps doctors and patients connect. With its secure, cloud-based platform, prac360 simplifies the process of scheduling and managing appointments. Get started today and simplify your practice”>
+  <meta name=”keywords” content=”PRAC360,PRAC,prac360.com,prac360 ,doctors,patient appointment, hospital ,application,doctor appointment,naveed nazir shah,prac360.com,kashmir” online appointment booking software, prac360 appointment scheduling software, prac360 online booking system, prac360 patient scheduling, prac360 appointment manager, appointment booking app, online appointment booking system, prac360 online booking app, prac360 patient appointment booking, online appointment scheduling software, online appointment booking tool, best appointment booking app, best online,pulmono logist,doctor near me ,doctor close me,kasmir ,zukura,pulomolgist zukura>
+  <link rel="canonical" href="">
+  <!-- Favicons -->
+  <link href="../public/assets/img/favicon.png" rel="icon">
+  <link href="../public/assets/img/favicon.png" rel="apple-touch-icon">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../public/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../public/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../public/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../public/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../public/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../public/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../public/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../public/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <img src="../public/assets/img/prac360bookappointment.png" class="img-fluid me-auto " id="toplogo" alt="prac360 book appointment">
+  
+      </nav> 
+
+      <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="appointment-btn scrollto me-3">Book an Appointment</a>
+      <a href="https://prac360-provider-web.web.app/" class="appointment-btn scrollto me-3"><i class="bi bi-door-open"></i>Login</a>
+  
+    </div>
+  </header>
+  <!-- End Header -->
 
     {{ content | safe }}
+  
+  
 
-</div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact p-3">
+            <h4>Prac360 - Contact</h4>
+            <p>
+              Prac360 Technologies Private Limited<br>
+              Umar Colony (A), Lalbazar<br>
+              Srinagar<br>
+              Jammu & kashmir - 190023 <br><br>
+              <strong>Phone: </strong>96222 96076<br>
+              <strong>Email: </strong>support@prac360.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links p-3">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="about_us.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="refund_policy.html">Terms of service - Refund Policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+
+      <div class="text-center">
+        <div class="copyright" style="text-align: Center">
+          &copy; Copyright@2023 <strong><span>Prac360 Technologies Private Limited.</span></strong> All Rights Reserved
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../public/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../public/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../public/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../public/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../public/assets/js/main.js"></script>
+
 </body>
+
 </html>
