@@ -7,31 +7,31 @@ layout: doctor
                 "{{ api.data.url }}"{{ "," if not loop.last }}
             {% endfor %}
         ]'>
-        <div id="doctor_list"></div>
+        <ul id="doctor_list"></ul>
     </section>
     <script>
         const apiContainer = document.getElementById('api-container');
         const apiUrls = JSON.parse(apiContainer.getAttribute('data-urls'));
-        async function apiCall(url){
-        fetch(url)
+        for(let i =0; i< apiUrls.length; i++){
+        fetch(apiUrls[i])
         .then( res => {
             return res.json()
         })
         .then(data => {
-            data.forEach(user => {
-                const doctor = document.createElement('h3')
-                doctor.classList.add('doctor');
-                doctor.textContent = user.name
-            document.getElementById('doctor_list').insertAdjacentElement('beforeend',doctor)
-            })
+            console.log(data)
+           dataRender(data)
         }).catch(error => console.log(error))
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-            apiUrls.forEach(url => {
-                apiCall(url);
-            });
+    function dataRender(data){
+        const doctorList  = document.getElementById("doctor_list")
+
+        data.forEach(element => {
+            const doctorData = document.createElement('li')
+            doctorData.textContent = element.name
+            doctorList.appendChild(doctorData)
         });
+    }
     </script>
 <style>
     .mt-15 { margin-top: 15px; }

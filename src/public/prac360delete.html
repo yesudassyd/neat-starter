@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>PRAC360 Customer Delete </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <style>.container{
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+     
+  
+  }
+  .header {
+      width: auto;
+      background-color:#2f80Ec;
+  }
+  .img1{
+      width: 130px;
+  }
+  .circle{
+      padding-top: 50px;
+  }
+  
+  
+  .main h3{
+      font-size: 20px;
+      font-family: 'Roboto'sans-serif;
+      font-style: semibold;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 20px;
+      width: 600;
+      color:#20BE79;
+      letter-spacing: 2%;
+  }   
+  .main h4{
+      font-size: 16px;
+      color:#A9A9AB;
+      padding: 10px;
+  }
+  .main_bottom{
+     color: #A9A9AB;
+     color: #A9A9AB;
+      border-bottom: 1px solid  #A9A9AB ;
+      padding: 20px;
+  }
+  h5{
+      line-height:100%;
+      padding-top: 20px;
+      color: #2f80Ec;
+      font-size: 15px;
+  
+  }
+  .right{
+      float: right;
+      font-size: 15px;
+  }
+  .left{
+     float: left;
+     color: #A9A9AB;
+     font-size: 15px;
+     
+  }
+  .btn{
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 500;
+      background-color:#E9F0FF;
+      opacity: 40;
+      border: none;
+      color: #2f80Ec;
+  
+  }
+  .email{
+      font-size: 16px;
+      padding-top: 20px;
+      color: rgb(47, 42, 42);
+      
+      
+  }
+  .icon-withtext{
+      display: inline-flex;
+      align-items: center;
+      
+  }
+  
+  .fail{
+      font-size: 20px;
+      font-family: 'Roboto'sans-serif;
+      font-style: semibold;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 20px;
+      width: 600;
+      color: #E73e3e;
+      letter-spacing: 5%;
+  
+  }
+  .money_fail{
+      font-size: 20px;
+      padding: 60px;
+  }
+  @media (max-width: 600px){
+      h5{
+          line-height:100%;
+          padding-top: 20px;
+          color: #2f80Ec;
+          
+      }
+      
+  }
+  
+  body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 0; /* Remove border radius for text boxes */
+    }
+
+    .button {
+      background-color: #007bff;
+      border-color: #007bff;
+      border-radius: 15px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    
+    
+    </style>
+</head>
+
+<body>
+ 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    
+    <div class="container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/dr-appointment-booking-app.appspot.com/o/logo%2Flogo_without_background.png?alt=media&token=bf100389-c1ca-456d-9758-ee9c3b5aa815" alt="" class="img1">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex align-items-center justify-content-start">
+               <a class="text-reset me-3" href="#">
+                    <i class="fas fa-shopping-cart text-white"></i>
+                </a>
+              </div>
+</nav>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <h2 class="mb-5">Delete User Account</h2>
+            <form id="myForm">
+                <div class="form-row mb-3">
+                  <div class="form-group">
+                    <label for="contactNo">ContactNo:</label>
+                    <input type="text" class="form-control" id="contactNo" name="contactNo" required>
+                  </div>
+                </div>
+                
+                <div class="form-row mb-3">
+                  <div class="form-group">
+                    <label for="reason">Reason:</label>
+                    <textarea id="reason" name="reason" class="form-control" rows="4" cols="50" required></textarea>
+                  </div>
+                </div>
+                            
+                <button type="submit" class="button mt-2 mx-auto d-block text-white">Submit</button>
+                <p id="demo"></p>
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+
+<footer class="bg-primary text-center text-white fixed-bottom">
+   
+    <div class="text-center p-3">
+        Copyright © 2023 Prac360 Technology PVT LTD. All Rights Reserved
+      </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+
+<script>
+    const el=document.getElementById('myForm')
+    if(el){
+        addEventListener('submit', function(event){
+        event.preventDefault();
+
+        var formData = new FormData(event.target);
+        var data = Object.fromEntries(formData.entries());
+        if(isValidContactNumber(data.contactNo)){
+        var result = {
+            contactNo: data.contactNo,
+            reason:data.reason,
+            tenantId:"33c75f9f"
+        }
+        axios.post('https://api.dev.prac360.com/v1/customer/deleteaccount',result)
+        .then(function (response) {
+            console.log(response);
+            alert('Form submitted successfully');
+        })
+        .catch(function (error) {
+            console.log(error);
+            alert('There was an error submitting the form');
+        });
+        } else{
+            alert('give valid contact number')
+        }   
+    });}
+
+    function isValidContactNumber(contactNumber) {
+
+      const regex = /^\d{10}$/;
+        return regex.test(contactNumber);
+    }
+</script>
+</body>
+
+</html>
