@@ -1,13 +1,18 @@
 --- 
-layout: doctor
+layout: doctors
 ---
-<div class="container max-w-3xl pt-5" style="margin-top: 100px;" >
+<div class="container max-w-3xl pt-5" style="margin-top: 150px;" >
 
     <h1 class="font-bold">Our Doctors</h1>
 
 </div>
-<div class="container max-w-3xl " style="margin-top: -50px;">
-    <section id="api-container" 
+<div class="container max-w-3xl " style="margin-top: 20px; margin-bottom: 100px;">
+    <ul>
+        {% for doctor in collections.doctor %}
+        <li><a href="{{ doctor.url }}">{{ doctor.data.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <!-- <section id="api-container" 
             data-urls='[
                 {% for api in collections.api %}
                     "{{ api.data.url }}"{{ "," if not loop.last }}
@@ -46,7 +51,7 @@ layout: doctor
         }catch(e){
             console.log(e)
         }
-        </script>
+        </script> -->
     <style>
         .mt-15 { margin-top: 15px; }
     </style>

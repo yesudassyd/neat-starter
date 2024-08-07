@@ -39,6 +39,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/favicon.ico"); 
   eleventyConfig.addPassthroughCopy("./src/public");
 
+  eleventyConfig.addCollection('doctor', function(collectionApi){
+    return collectionApi.getFilteredByGlob('src/doctor/**/*.md')
+  })
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
