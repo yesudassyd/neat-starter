@@ -989,38 +989,7 @@
     </section> -->
     <!-- End Contact Section -->
     <section>
-      <section id="api-container" 
-            doctorList='[
-                {% for doctor in collections.doctor %}
-                    "{{ doctor | safe }}"{{ "," if not loop.last }}
-                {% endfor %}
-            ]'>
-            <div class="doctors-container">
-              <a href="../doctors/" class="view_doctor-btn me-3" style="float: right;">Show All Doctors</a>
-              <div class="header">
-                  <h2>Available Doctors</h2>
-              </div>
-              <div class="doctors-grid" id="doctors-grid">
-              </div>
-            </div>
-        </section>
-        <script>
-              const apiContainer = document.getElementById('api-container');
-              const doctors = JSON.parse(apiContainer.getAttribute('doctorList'));
-              const doctors_grid = document.getElementById("doctors-grid")
-              for(let i =0; i< 4; i++){
-                      const card = document.createElement('div')
-                      card.className = "doctor-card"
-                      card.innerHTML =  `<img src="/static/img/wallpaperflare.com_wallpaper.jpg" alt="Dr. Naveed Nazir Shah">
-                  <div class="doctor-info">
-                      <h3>Prof. (Dr.) Naveed Nazir Shah</h3>
-                      <p>Pulmonologist</p>
-                      <p><i class="fas fa-stethoscope"></i> 5 Years of Experience</p>
-                      <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="book-appointment">Book an Appointment</a>
-                  </div>`
-                doctors_grid.appendChild(card)
-              }
-          </script>
+      <a href="../doctors/" class="view_doctor-btn me-3">Show All Doctors</a>
     </section>
     <style>
       .view_doctor-btn {
@@ -1036,84 +1005,6 @@
     display: inline-block;
   
     }
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-.doctors-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-}
-
-.header {
-    text-align:left;
-    margin-bottom: 20px;
-}
-
-.header h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.header p {
-    color: #777;
-}
-
-.doctors-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.doctor-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 23%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.doctor-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-}
-
-.doctor-info {
-    padding: 15px;
-}
-
-.doctor-info h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.doctor-info p {
-    color: #777;
-    margin: 5px 0;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
     </style>
   </main><!-- End #main -->
 
