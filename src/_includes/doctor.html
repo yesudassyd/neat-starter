@@ -2,7 +2,7 @@
 layout: doctors.html
 ---
 
-<div class="container max-w-3xl pt-5" style="margin-top: 150px; margin-bottom: 50px;" >
+<!-- <div class="container max-w-3xl pt-5" style="margin-top: 150px; margin-bottom: 50px;" >
 
   <h1 class="font-bold">Doctor Profile</h1>
 
@@ -12,5 +12,99 @@ layout: doctors.html
     <p><strong>Doctor Name:</strong>{{ title }}</p>
     <p><strong>Doctor Id:</strong>{{ id }}</p>
     <p><strong>CreatedAt:</strong>{{ createdAt }}</p>
+  </div>
+</div> -->
+
+
+
+<div class="container max-w-3xl " style="margin-top: 20px; margin-bottom: 100px;">
+  <div class="container max-w-3xl pt-5" style="margin-top: 150px;" >
+
+    <h1 class="font-bold" style="font-weight: bolder;">Profile</h1>
+
+  </div>
+  <div class="doctor-profile-page">
+    <img src="/static/img/wallpaperflare.com_wallpaper.jpg" alt="Doctor Image" width="150" height="150">
+    <div class="doctor-details-page">
+        <h2>Prof. (Dr.) Naveed Nazir Shah</h2>
+        <p style="color: black;">Pulmonologist</p>
+        <h5>Doctor is available at the following locations</h5>
+        <div class="locations-page">
+            <div class="location-page">
+                <span class="location-icon-page">🏠</span>
+                <div class="location-details-page">
+                    <h4>Breathe Easy</h4>
+                    <p>Location: Sanatnagar</p>
+                    <p>Available Days: Sun- Tue- Wed</p>
+                    <p>Contact Number: 9622852619, 9797020004</p>
+                </div>
+            </div>
+            <div class="location-page">
+                <span class="location-icon-page">🏠</span>
+                <div class="location-details-page">
+                    <h4>Chest Care</h4>
+                    <p>Location: Zakoora</p>
+                    <p>Available Days: Thu- Fri- Sat</p>
+                    <p>Contact Number: 9622852619, 9797020004</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+      .doctor-profile-page {
+          display: flex;
+          border: 1px solid #ccc;
+          padding: 15px;
+          margin: 20px 0;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      .doctor-profile-page img {
+          border-radius: 8px;
+          margin-right: 20px;
+      }
+      .doctor-details-page {
+          flex: 1;
+      }
+      .doctor-details-page h2 {
+          margin: 0;
+          font-size: 24px;
+      }
+      .doctor-details-page p {
+          margin: 5px 0;
+          color: #666;
+      }
+      .doctor-details-page h5 {
+          margin-top: 20px;
+          color: #666;
+      }
+      .locations-page {
+          margin-top: 20px;
+      }
+      .location-page {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+      }
+      .location-icon-page {
+          font-size: 24px;
+          margin-right: 10px;
+      }
+      .location-details-page {
+          flex: 1;
+      }
+      .location-details-page h4 {
+          margin: 0;
+          font-size: 18px;
+          font-weight: bold;
+      }
+      .location-details-page p {
+          margin: 2px 0;
+      }
+    </style>
   </div>
 </div>

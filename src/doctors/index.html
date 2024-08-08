@@ -1,17 +1,45 @@
 --- 
 layout: doctors
 ---
-<div class="container max-w-3xl pt-5" style="margin-top: 150px;" >
 
-    <h1 class="font-bold">Our Doctors</h1>
-
-</div>
 <div class="container max-w-3xl " style="margin-top: 20px; margin-bottom: 100px;">
-    <ul>
+
+    <div class="doctor-list">
+        <div class="container max-w-3xl pt-5" style="margin-top: 150px;" >
+
+            <h1 class="font-bold" style="font-weight: bolder;">Our Doctors</h1>
+        
+        </div>
+    {% for doctor in collections.doctor %}
+    <div class="doctor-profile">
+        <img src="/static/img/wallpaperflare.com_wallpaper.jpg" alt="Doctor Image" width="150" height="180">
+        <div class="doctor-details">
+            <a href="{{ doctor.url }}" class="view-profile">View Profile</a>
+            <h2><strong>(Dr.) Naveed Nazir Shah</strong></h2>
+            <p><strong>Pulmonologist</strong></p>
+            <p><small>Dr Naveed Nazir Shah is a professor of pulmonology and an interventional pulmonologist having an experience of over 20 years in treatment of chest diseases. After completing his post graduation in pulmonology he has done European Respiratory Fellowship in Interventional Pulmonology...</small></p>
+            <div class="info">
+                <p><span class="label">Experience of Years:</span> 20 Years</p><br>
+                <p><span class="label">Available Location:</span> Srinagar</p><br>
+                <p><span class="label">Contact Number:</span> 1234567890</p><br>
+            </div>
+            <div class="buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="book-appointment">Book an Appointment</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+
+    <!-- <ul>
         {% for doctor in collections.doctor %}
         <li><a href="{{ doctor.url }}">{{ doctor.data.title }}</a></li>
         {% endfor %}
-    </ul>
+    </ul> -->
+
+
+
+
     <!-- <section id="api-container" 
             data-urls='[
                 {% for api in collections.api %}
@@ -54,5 +82,64 @@ layout: doctors
         </script> -->
     <style>
         .mt-15 { margin-top: 15px; }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .doctor-profile {
+            display: flex;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .doctor-profile img {
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .doctor-details {
+            flex: 1;
+        }
+        .doctor-details h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .doctor-details p {
+            margin: 5px 0;
+            color: #666;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .info p {
+        font-weight: bold;
+        margin: 5px 0;
+        }
+        .label {
+            font-weight: 100;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .doctor-details .buttons {
+            margin-top: 10px;
+        }
+        .doctor-details .buttons a {
+            text-decoration: none;
+            margin-right: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .view-profile {
+            float: right;
+            color: #007bff;
+        }
+        .book-appointment {
+            float: right;
+            background-color: #007bff;
+            color: white;
+        }
+        .doctor-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
     </style>
 </div>

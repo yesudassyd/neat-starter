@@ -1,0 +1,63 @@
+.view_doctor-btn {
+    margin-left: 25px;
+    color: #fff;
+    background-color: #2f80ec;
+    
+    border-radius: 50px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+  
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.doctor-profile {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.doctor-profile img {
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.doctor-details {
+    flex: 1;
+}
+.doctor-details h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.doctor-details p {
+    margin: 5px 0;
+    color: #666;
+}
+.doctor-details .experience, .doctor-details .location, .doctor-details .contact {
+    font-weight: bold;
+    margin: 10px 0;
+}
+.doctor-details .buttons {
+    margin-top: 10px;
+}
+.doctor-details .buttons a {
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.view-profile {
+    color: #007bff;
+}
+.book-appointment {
+    background-color: #007bff;
+    color: white;
+}
+.doctor-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
