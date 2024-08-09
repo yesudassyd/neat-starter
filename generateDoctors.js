@@ -8,7 +8,7 @@ if (!fs.existsSync(outputDir)) {
 }
 
 
-fetch("https://66a8d49ee40d3aa6ff5996ab.mockapi.io/doctors")
+fetch("https://prac360-dev.agamvanigam.com/v3/doctor/getall")
     .then( res => {
         return res.json()
     })
@@ -17,15 +17,19 @@ fetch("https://66a8d49ee40d3aa6ff5996ab.mockapi.io/doctors")
             const mdContent = 
 `---
 layout: doctor
-title: ${doctor.name}
-id: ${doctor.id}
-createdAt: ${doctor.createdAt}
----`;
-
-            const fileName = `${doctor.name.replace(/\s+/g, '_').toLowerCase()}.md`;
+profilePic : ${doctor.profileId.profilePic}
+title: ${doctor.profileId.name}
+specialties: ${doctor.specialties}
+description: ${doctor.description}
+yearsOfExp: ${doctor.yearsOfExp}
+location: ${doctor.hospitalId.areaId.name}
+contact: ${doctor.profileId.contactNo}
+hospitalName: ${doctor.hospitalId.name}
+avl_days: ${doctor.hospitalId.address}
+_id: ${doctor._id}
+---`;       
+            const fileName = `${doctor.profileId.name.replace(/\s+/g,'').toLowerCase()}_${doctor._id}.md`;
             const filePath = path.join(outputDir, fileName);
-            //console.log(filePath)
-            //console.log(fs.existsSync(filePath))
             if(!fs.existsSync(filePath)){
                 fs.writeFileSync(filePath, mdContent.trim());
                 console.log(`Created ${filePath}`);

@@ -14,24 +14,24 @@
   <meta name=”keywords” content=”PRAC360,PRAC,prac360.com,prac360 ,doctors,patient appointment, hospital ,application,doctor appointment,naveed nazir shah,prac360.com,kashmir” online appointment booking software, prac360 appointment scheduling software, prac360 online booking system, prac360 patient scheduling, prac360 appointment manager, appointment booking app, online appointment booking system, prac360 online booking app, prac360 patient appointment booking, online appointment scheduling software, online appointment booking tool, best appointment booking app, best online,pulmono logist,doctor near me ,doctor close me,kasmir ,zukura,pulomolgist zukura>
   <link rel="canonical" href="">
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+  <link href="/public/assets/img/favicon.png" rel="icon">
+  <link href="/public/assets/img/favicon.png" rel="apple-touch-icon">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/public/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/public/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="/public/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -96,7 +96,7 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <!-- <a href="https://prac360.com/"> -->
-      <img src="assets/img/prac360bookappointment.png" class="img-fluid me-auto " id="toplogo" alt="prac360 book appointment">
+      <img src="/public/assets/img/prac360bookappointment.png" class="img-fluid me-auto " id="toplogo" alt="prac360 book appointment">
     <!-- </a> -->
       <!-- <h1 class="logo me-auto"><a href="index.html">Medilab</a></h1>
       Uncomment below if you prefer to use an image logo -->
@@ -988,170 +988,8 @@
       </div>
     </section> -->
     <!-- End Contact Section -->
-    <section>
-      <div class="doctors-container">
-        <div class="view-more">
-          <a href="../doctors/" class="view_doctor-btn me-3">Show All</a>
-      </div>
-        <div class="header">
-            <h2>Available Doctors</h2>
-        </div>
-        <div class="doctors-grid">
-          {% for doctor in collections.doctor %}
-            <div class="doctor-card">
-                <img src="{{ doctor.data.profilePic }}">
-                <div class="doctor-info">
-                    <h3>{{ doctor.data.title }}</h3>
-                    <p>{{ doctor.data.specialties }}</p>
-                    <p><i class="fas fa-stethoscope"></i>{{ doctor.data.yearsOfExp }} Years of Experience</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
-                </div>
-            </div>
-            {% endfor %}
-            <!-- <div class="doctor-card">
-              <img src="{{ doctor[0].profilePic }}" alt="Dr. Naveed Nazir Shah">
-              <div class="doctor-info">
-                  <h3>{{ doctor[0].title }}</h3>
-                  <p>{{ doctor[0].specialties }}</p>
-                  <p><i class="fas fa-stethoscope"></i>{{ doctor[0].yearsOfExp }} Years of Experience</p>
-                  <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
-              </div>
-            </div>
-      
-            <div class="doctor-card">
-              <img src="{{ doctor[0].profilePic }}" alt="Dr. Naveed Nazir Shah">
-              <div class="doctor-info">
-                  <h3>{{ doctor[0].title }}</h3>
-                  <p>{{ doctor[0].specialties }}</p>
-                  <p><i class="fas fa-stethoscope"></i>{{ doctor[0].yearsOfExp }} Years of Experience</p>
-                  <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
-              </div>
-          </div>
-      
-          <div class="doctor-card">
-            <img src="{{ doctor[0].profilePic }}" alt="Dr. Naveed Nazir Shah">
-            <div class="doctor-info">
-                <h3>{{ doctor[0].title }}</h3>
-                <p>{{ doctor[0].specialties }}</p>
-                <p><i class="fas fa-stethoscope"></i>{{ doctor[0].yearsOfExp }} Years of Experience</p>
-                <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
-            </div>
-        </div> -->
-        </div>
-    </div>
-    </section>
-    <style>
-      .view_doctor-btn {
-      margin-left: 43%;
-    color: #fff;
-    background-color: #2f80ec;
     
-    border-radius: 50px;
-    padding: 8px 25px;
-    white-space: nowrap;
-    transition: 0.3s;
-    font-size: 14px;
-    display: inline-block;
-  
-    }
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    }
-
-    .doctors-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-    }
-
-    .header {
-        text-align: left;
-        margin-bottom: 20px;
-    }
-
-    .header h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .header p {
-        color: #777;
-    }
-
-    .doctors-grid {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .doctor-card {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 23%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .doctor-card img {
-        width: 100%;
-        height: auto;
-        border-bottom: 1px solid #ddd;
-        object-fit: cover;
-    }
-
-    .doctor-info {
-        padding: 15px 0;
-        flex: 1;
-    }
-
-    .doctor-info h3 {
-        font-size: 18px;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .doctor-info p {
-        color: #777;
-        margin: 5px 0;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 10px 15px;
-        background-color: #007bff;
-        color: #fff;
-        border-radius: 4px;
-        text-decoration: none;
-        margin-top: 10px;
-    }
-
-    .btn:hover {
-        background-color: #0056b3;
-    }
-
-    .view-more {
-        text-align: right;
-    }
-
-    .view-more a {
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .view-more a i {
-        margin-left: 5px;
-    }
-
-    .view-more a:hover {
-        color: #0056b3;
-    }
-
-    </style>
+    {{ content | safe }}
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -1238,14 +1076,14 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="/public/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/public/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="/public/assets/js/main.js"></script>
 
 </body>
 

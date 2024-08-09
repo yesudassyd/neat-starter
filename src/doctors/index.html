@@ -12,16 +12,16 @@ layout: doctors
         </div>
     {% for doctor in collections.doctor %}
     <div class="doctor-profile">
-        <img src="/static/img/wallpaperflare.com_wallpaper.jpg" alt="Doctor Image" width="150" height="180">
+        <img src="{{ doctor.data.profilePic }}" alt="Doctor Image" width="150" height="180">
         <div class="doctor-details">
             <a href="{{ doctor.url }}" class="view-profile">View Profile</a>
-            <h2><strong>(Dr.) Naveed Nazir Shah</strong></h2>
-            <p><strong>Pulmonologist</strong></p>
-            <p><small>Dr Naveed Nazir Shah is a professor of pulmonology and an interventional pulmonologist having an experience of over 20 years in treatment of chest diseases. After completing his post graduation in pulmonology he has done European Respiratory Fellowship in Interventional Pulmonology...</small></p>
+            <h2><strong>{{ doctor.data.title }}</strong></h2>
+            <p><strong>{{ doctor.data.specialties }}</strong></p><br>
+            <p><small>{{ doctor.data.description }}</small></p>
             <div class="info">
-                <p><span class="label">Experience of Years:</span> 20 Years</p><br>
-                <p><span class="label">Available Location:</span> Srinagar</p><br>
-                <p><span class="label">Contact Number:</span> 1234567890</p><br>
+                <p><span class="label">Experience of Years:</span> {{ doctor.data.yearsOfExp }}</p><br>
+                <p><span class="label">Available Location:</span>{{ doctor.data.location }}</p><br>
+                <p><span class="label">Contact Number:</span>{{ doctor.data.contact }}</p><br>
             </div>
             <div class="buttons">
                 <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="book-appointment">Book an Appointment</a>
@@ -31,55 +31,7 @@ layout: doctors
     {% endfor %}
     </div>
 
-    <!-- <ul>
-        {% for doctor in collections.doctor %}
-        <li><a href="{{ doctor.url }}">{{ doctor.data.title }}</a></li>
-        {% endfor %}
-    </ul> -->
-
-
-
-
-    <!-- <section id="api-container" 
-            data-urls='[
-                {% for api in collections.api %}
-                    "{{ api.data.url }}"{{ "," if not loop.last }}
-                {% endfor %}
-            ]'>
-            <ul id="doctor_list"></ul>
-        </section>
-        <script>
-        try{
-            const apiContainer = document.getElementById('api-container');
-            const apiUrls = JSON.parse(apiContainer.getAttribute('data-urls'));
-            for(let i =0; i< apiUrls.length; i++){
-            fetch(apiUrls[i])
-            .then( res => {
-                return res.json()
-            })
-            .then(data => {
-            dataRender(data)
-            }).catch(error => console.log(error))
-        }
-
-        function dataRender(data){
-            const doctorList  = document.getElementById("doctor_list")
-
-            data.forEach(element => {
-                const doctorData = document.createElement('li')
-                const link = document.createElement('a')
-                link.textContent = element.name
-                link.target = "_blank"
-                link.href = `../doctor_profile?name=${encodeURIComponent(element.name)}&id=${encodeURIComponent(element.id)}&createdAt=${encodeURIComponent(element.createdAt)}`;
-                doctorData.appendChild(link)
-                doctorList.appendChild(doctorData)
-            });
-        }
-
-        }catch(e){
-            console.log(e)
-        }
-        </script> -->
+    
     <style>
         .mt-15 { margin-top: 15px; }
         body {
@@ -98,6 +50,7 @@ layout: doctors
             margin-right: 20px;
         }
         .doctor-details {
+            padding: 15px 0;
             flex: 1;
         }
         .doctor-details h2 {

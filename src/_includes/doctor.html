@@ -24,28 +24,21 @@ layout: doctors.html
 
   </div>
   <div class="doctor-profile-page">
-    <img src="/static/img/wallpaperflare.com_wallpaper.jpg" alt="Doctor Image" width="150" height="150">
+    <img src="{{ profilePic }}" alt="Doctor Image" width="150" height="150">
     <div class="doctor-details-page">
-        <h2>Prof. (Dr.) Naveed Nazir Shah</h2>
-        <p style="color: black;">Pulmonologist</p>
+        <h2>{{ title }}</h2>
+        <p style="color: black;">{{ specialties }}</p>
         <h5>Doctor is available at the following locations</h5>
         <div class="locations-page">
             <div class="location-page">
                 <span class="location-icon-page">🏠</span>
                 <div class="location-details-page">
-                    <h4>Breathe Easy</h4>
-                    <p>Location: Sanatnagar</p>
-                    <p>Available Days: Sun- Tue- Wed</p>
-                    <p>Contact Number: 9622852619, 9797020004</p>
-                </div>
-            </div>
-            <div class="location-page">
-                <span class="location-icon-page">🏠</span>
-                <div class="location-details-page">
-                    <h4>Chest Care</h4>
-                    <p>Location: Zakoora</p>
-                    <p>Available Days: Thu- Fri- Sat</p>
-                    <p>Contact Number: 9622852619, 9797020004</p>
+                    <h4>{{ hospitalName }}</h4>
+                    <div class="info">
+                        <p><span class="label">Experience of Years:  </span> {{ yearsOfExp }}</p>
+                        <p><span class="label">Available Location:  </span>{{ location }}</p>
+                        <p><span class="label">Contact Number:  </span>{{ contact }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,9 +95,15 @@ layout: doctors.html
           font-size: 18px;
           font-weight: bold;
       }
-      .location-details-page p {
+      .info p {
           margin: 2px 0;
       }
+      .info p {
+        font-weight: bold;
+        }
+        .label {
+            font-weight: 100;
+        }
     </style>
   </div>
 </div>
