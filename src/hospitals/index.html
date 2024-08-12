@@ -1,0 +1,143 @@
+---
+layout: template.html
+---
+
+<div class="container max-w-3xl " style="margin-top: 20px; margin-bottom: 100px;" >
+    <div class="hospital-list">
+        <div class="container max-w-3xl pt-5" style="margin-top: 100px; margin-bottom: 50px;" >
+
+            <h1 class="font-bold" style="color: black; font-weight: 600;">Our Hospitals</h1>
+        
+        </div>
+        {% for hospital in collections.hospital %}
+        <div class="hospital-card">
+            <img src="{{ hospital.data.profilePic }}">
+            <div class="hospital-info">
+                <h3>{{ hospital.data.name }}</h3>
+                <p class="description">{{ hospital.data.details }}</p> 
+                <div class="hospital-details">
+                    <p><span>Available Specialties: </span>{{ hospital.data.specialities }}</p>
+                    <p><span>Available Doctors: </span>{{ hospital.data.doctors }}</p>
+                    <p><span>Available Services: </span>{{ hospital.data.services }}</p>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.hospital-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hospitals {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hospital-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 40px 0;
+    height: 250px;
+}
+
+.hospital-card img {
+    width: 180px;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.hospital-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hospital-info a {
+    margin: 0 10px 50px;
+}
+
+.hospital-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.hospital-info .description {
+    font-size:smaller;
+    font-weight: 400;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+.hospital-info .description a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.hospital-info .hospital-details {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.hospital-info .hospital-details p {
+    margin: 0;
+    font-weight: bold
+}
+.hospital-info .hospital-details span {
+    font-weight: 100;
+    font-size: smaller;
+    color: #777;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+</style>
+</div>

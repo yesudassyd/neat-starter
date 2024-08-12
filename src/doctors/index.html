@@ -1,5 +1,5 @@
 --- 
-layout: doctors
+layout: template.html
 ---
 
 <div class="container max-w-3xl " style="margin-top: 20px; margin-bottom: 100px;">
@@ -7,7 +7,7 @@ layout: doctors
     <div class="doctor-list">
         <div class="container max-w-3xl pt-5" style="margin-top: 150px;" >
 
-            <h1 class="font-bold" style="font-weight: bolder;">Our Doctors</h1>
+            <h1 class="font-bold" style="color: black; font-weight: 600;">Our Doctors</h1>
         
         </div>
     {% for doctor in collections.doctor %}
@@ -16,8 +16,8 @@ layout: doctors
         <div class="doctor-details">
             <a href="{{ doctor.url }}" class="view-profile">View Profile</a>
             <h2><strong>{{ doctor.data.title }}</strong></h2>
-            <p><strong>{{ doctor.data.specialties }}</strong></p><br>
-            <p><small>{{ doctor.data.description }}</small></p>
+            <p class="specialties"><strong>{{ doctor.data.specialties }}</strong></p><br>
+            <p class="description"><small>{{ doctor.data.description }}</small></p>
             <div class="info">
                 <p><span class="label">Experience of Years:</span> {{ doctor.data.yearsOfExp }}</p><br>
                 <p><span class="label">Available Location:</span>{{ doctor.data.location }}</p><br>
@@ -43,7 +43,7 @@ layout: doctors
             padding: 15px;
             margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
         }
         .doctor-profile img {
             border-radius: 8px;
@@ -59,15 +59,21 @@ layout: doctors
         }
         .doctor-details p {
             margin: 5px 0;
-            color: #666;
             display: inline-block;
             margin-right: 10px;
+        }
+        .doctor-details .description {
+            font-weight: 400;
+        }
+        .doctor-details .specialties {
+            color: #666;
         }
         .info p {
         font-weight: bold;
         margin: 5px 0;
         }
         .label {
+            color: #666;
             font-weight: 100;
             display: inline-block;
             margin-right: 10px;

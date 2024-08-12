@@ -8,7 +8,7 @@ if (!fs.existsSync(outputDir)) {
 }
 
 
-fetch("https://prac360-dev.agamvanigam.com/v3/doctor/getall")
+fetch("https://prac360-dev.agamvanigam.com/v3/home/getall/doctors")
     .then( res => {
         return res.json()
     })
@@ -32,7 +32,7 @@ _id: ${doctor._id}
             const filePath = path.join(outputDir, fileName);
             if(!fs.existsSync(filePath)){
                 fs.writeFileSync(filePath, mdContent.trim());
-                console.log(`Created ${filePath}`);
+                console.log(`Doctor Created ${filePath}`);
             }
         });
 }).catch(error => console.log(error))
