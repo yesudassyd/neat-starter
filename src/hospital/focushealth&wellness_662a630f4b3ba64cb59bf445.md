@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 662a630f4b3ba64cb59bf445
+doctorsInHospital: /doctorsInHospital/focushealth&wellness/
 ---

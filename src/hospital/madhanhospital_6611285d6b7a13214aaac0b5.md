@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 6611285d6b7a13214aaac0b5
+doctorsInHospital: /doctorsInHospital/madhanhospital/
 ---

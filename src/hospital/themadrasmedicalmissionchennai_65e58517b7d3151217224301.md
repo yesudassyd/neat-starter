@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 65e58517b7d3151217224301
+doctorsInHospital: /doctorsInHospital/themadrasmedicalmissionchennai/
 ---

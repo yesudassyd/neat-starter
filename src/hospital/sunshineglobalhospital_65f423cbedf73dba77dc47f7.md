@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 65f423cbedf73dba77dc47f7
+doctorsInHospital: /doctorsInHospital/sunshineglobalhospital/
 ---

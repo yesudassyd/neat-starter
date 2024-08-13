@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 6618febe0f403a6dfc077f8a
+doctorsInHospital: /doctorsInHospital/modernhospital/
 ---

@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 661a4e2345158cb1d3b21140
+doctorsInHospital: /doctorsInHospital/malinihospital/
 ---

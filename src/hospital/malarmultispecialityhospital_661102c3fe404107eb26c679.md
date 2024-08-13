@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 661102c3fe404107eb26c679
+doctorsInHospital: /doctorsInHospital/malarmultispecialityhospital/
 ---

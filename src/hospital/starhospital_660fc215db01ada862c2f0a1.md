@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 660fc215db01ada862c2f0a1
+doctorsInHospital: /doctorsInHospital/starhospital/
 ---

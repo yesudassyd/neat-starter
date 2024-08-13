@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 65e81cd0480bbf29c5ae2b45
+doctorsInHospital: /doctorsInHospital/lakshmihospital/
 ---

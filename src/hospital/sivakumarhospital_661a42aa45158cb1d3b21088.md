@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 661a42aa45158cb1d3b21088
+doctorsInHospital: /doctorsInHospital/sivakumarhospital/
 ---

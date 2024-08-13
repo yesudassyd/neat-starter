@@ -13,6 +13,7 @@ layout: template.html
         <div class="hospital-card">
             <img src="{{ hospital.data.profilePic }}">
             <div class="hospital-info">
+                <a href="{{ hospital.data.doctorsInHospital }}" class="view-doctors-link">view doctors</a>
                 <h3>{{ hospital.data.name }}</h3>
                 <p class="description">{{ hospital.data.details }}</p> 
                 <div class="hospital-details">
@@ -138,6 +139,15 @@ layout: template.html
 
 .btn:hover {
     background-color: #0056b3;
+}
+.view-doctors-link {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.view-doctors-link:hover {
+    text-decoration: underline;
 }
 </style>
 </div>

@@ -7,4 +7,5 @@ specialities: 9
 doctors: 7
 services: 6
 _id: 666fd7d768fd92397090b11b
+doctorsInHospital: /doctorsInHospital/thamaraihospital/
 ---

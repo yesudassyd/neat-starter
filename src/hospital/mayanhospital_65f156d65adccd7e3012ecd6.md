@@ -7,4 +7,5 @@ specialities: 1
 doctors: 1
 services: 1
 _id: 65f156d65adccd7e3012ecd6
+doctorsInHospital: /doctorsInHospital/mayanhospital/
 ---

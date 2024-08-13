@@ -7,4 +7,5 @@ specialities: 1
 doctors: 1
 services: 3
 _id: 667ac006f431272f4c201deb
+doctorsInHospital: /doctorsInHospital/multicarehospital/
 ---

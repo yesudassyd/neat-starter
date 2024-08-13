@@ -7,4 +7,5 @@ specialities: 2
 doctors: 2
 services: 1
 _id: cfc0e55271c25e48d6d8dda7
+doctorsInHospital: /doctorsInHospital/cure&care/
 ---

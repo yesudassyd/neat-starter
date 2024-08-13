@@ -7,4 +7,5 @@ specialities: 9
 doctors: 5
 services: 5
 _id: 6645b4f38cad9a1eaf8efad1
+doctorsInHospital: /doctorsInHospital/susitharanmulhospital/
 ---

@@ -7,4 +7,5 @@ specialities: 13
 doctors: 13
 services: 4
 _id: 55bc4d78fb37ef8b3e535960
+doctorsInHospital: /doctorsInHospital/breatheeasy/
 ---

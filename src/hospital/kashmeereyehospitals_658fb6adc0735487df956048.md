@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 658fb6adc0735487df956048
+doctorsInHospital: /doctorsInHospital/kashmeereyehospitals/
 ---

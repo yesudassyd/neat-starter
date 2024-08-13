@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 65a772e8269055a4c427f970
+doctorsInHospital: /doctorsInHospital/health4uamultispecialitycenter/
 ---

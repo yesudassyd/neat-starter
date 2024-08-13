@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 663efc11b33340bed7ac876f
+doctorsInHospital: /doctorsInHospital/susitharanhospital/
 ---

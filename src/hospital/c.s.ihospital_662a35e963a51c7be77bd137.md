@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 662a35e963a51c7be77bd137
+doctorsInHospital: /doctorsInHospital/c.s.ihospital/
 ---

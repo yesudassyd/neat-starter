@@ -7,4 +7,5 @@ specialities: 16
 doctors: 27
 services: 2
 _id: 6628a0b30f74628d680c1693
+doctorsInHospital: /doctorsInHospital/aaminahospitalcreatedbysridhar/
 ---

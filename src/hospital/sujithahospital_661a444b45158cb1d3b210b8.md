@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 661a444b45158cb1d3b210b8
+doctorsInHospital: /doctorsInHospital/sujithahospital/
 ---

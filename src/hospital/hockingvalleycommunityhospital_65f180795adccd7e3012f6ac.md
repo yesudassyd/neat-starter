@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 65f180795adccd7e3012f6ac
+doctorsInHospital: /doctorsInHospital/hockingvalleycommunityhospital/
 ---

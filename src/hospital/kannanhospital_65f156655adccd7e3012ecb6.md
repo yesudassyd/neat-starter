@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 65f156655adccd7e3012ecb6
+doctorsInHospital: /doctorsInHospital/kannanhospital/
 ---

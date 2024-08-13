@@ -7,4 +7,5 @@ specialities: 4
 doctors: 54
 services: 5
 _id: 663485ad88d374aa54895aca
+doctorsInHospital: /doctorsInHospital/noorahospital/
 ---

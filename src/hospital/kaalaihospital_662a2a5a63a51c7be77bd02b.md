@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 662a2a5a63a51c7be77bd02b
+doctorsInHospital: /doctorsInHospital/kaalaihospital/
 ---

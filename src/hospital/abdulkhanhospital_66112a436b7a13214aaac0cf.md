@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 66112a436b7a13214aaac0cf
+doctorsInHospital: /doctorsInHospital/abdulkhanhospital/
 ---

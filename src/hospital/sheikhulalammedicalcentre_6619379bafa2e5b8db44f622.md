@@ -7,4 +7,5 @@ specialities: 2
 doctors: 1
 services: 0
 _id: 6619379bafa2e5b8db44f622
+doctorsInHospital: /doctorsInHospital/sheikhulalammedicalcentre/
 ---

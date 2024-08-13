@@ -7,4 +7,5 @@ specialities: 1
 doctors: 1
 services: 1
 _id: ff6fa7c949077d5acea42634
+doctorsInHospital: /doctorsInHospital/aishahealthcare/
 ---

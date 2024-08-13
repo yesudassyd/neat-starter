@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 65e578fdb7d315121722421b
+doctorsInHospital: /doctorsInHospital/themadrasmedicalmission/
 ---

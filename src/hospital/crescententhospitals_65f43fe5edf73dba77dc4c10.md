@@ -7,4 +7,5 @@ specialities: 1
 doctors: 1
 services: 1
 _id: 65f43fe5edf73dba77dc4c10
+doctorsInHospital: /doctorsInHospital/crescententhospitals/
 ---

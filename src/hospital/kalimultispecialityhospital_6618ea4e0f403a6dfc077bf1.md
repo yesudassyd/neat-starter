@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 6618ea4e0f403a6dfc077bf1
+doctorsInHospital: /doctorsInHospital/kalimultispecialityhospital/
 ---

@@ -7,4 +7,5 @@ specialities: 2
 doctors: 3
 services: 1
 _id: 5255e7a74f741592bfc9f64b
+doctorsInHospital: /doctorsInHospital/expectcare,srinagar/
 ---

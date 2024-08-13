@@ -7,4 +7,5 @@ specialities: 1
 doctors: 1
 services: 1
 _id: 243d74e9ec3d952291f40229
+doctorsInHospital: /doctorsInHospital/drtahirmalikclinic/
 ---

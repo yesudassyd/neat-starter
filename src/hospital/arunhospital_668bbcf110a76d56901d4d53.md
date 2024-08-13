@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 668bbcf110a76d56901d4d53
+doctorsInHospital: /doctorsInHospital/arunhospital/
 ---

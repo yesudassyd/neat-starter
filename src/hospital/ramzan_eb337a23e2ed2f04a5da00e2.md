@@ -7,4 +7,5 @@ specialities: 1
 doctors: 1
 services: 1
 _id: eb337a23e2ed2f04a5da00e2
+doctorsInHospital: /doctorsInHospital/ramzan/
 ---

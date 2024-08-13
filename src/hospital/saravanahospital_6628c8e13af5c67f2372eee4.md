@@ -7,4 +7,5 @@ specialities: 0
 doctors: 0
 services: 0
 _id: 6628c8e13af5c67f2372eee4
+doctorsInHospital: /doctorsInHospital/saravanahospital/
 ---

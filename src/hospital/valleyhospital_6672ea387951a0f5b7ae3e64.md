@@ -7,4 +7,5 @@ specialities: 2
 doctors: 2
 services: 4
 _id: 6672ea387951a0f5b7ae3e64
+doctorsInHospital: /doctorsInHospital/valleyhospital/
 ---
