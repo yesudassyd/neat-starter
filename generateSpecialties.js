@@ -2,46 +2,38 @@ const fs = require('fs');
 const path = require('path');
 const _ = require('lodash')
 
-const outputDir = path.join(__dirname, 'src/hospital');
+const outputDir = path.join(__dirname, 'src/specialty');
 
 if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
 }
 
 
-fetch("https://prac360-dev.agamvanigam.com/v3/home/getall/hospitals")
+fetch("https://prac360-dev.agamvanigam.com/v3/home/getall/specialties")
     .then( res => {
         return res.json()
     })
     .then(data => {
-        data.forEach(async (hospital)  => {
-            const hospitalDetails =await fetch(`https://prac360-dev.agamvanigam.com/v3/home/hospital/details/${hospital._id}`)
-            .then( res => {
-                return res.json()
-            })
+        data.forEach(async (specialty)  => {
             const mdContent = 
 `---
-profilePic : ${hospital.logo}
-name: ${hospital.name}
-details: ${hospital.details}
-location: ${hospital.areaId.name}
-specialities: ${hospitalDetails.specialities}
-doctors: ${hospitalDetails.doctors}
-services: ${hospitalDetails.services}
-_id: ${hospital._id}
-doctorsInHospital: /doctorsInHospital/${hospital.name.replace(/\s+/g,'').toLowerCase()}/
+icon : ${specialty.iconUrl}
+name: ${specialty.displayName}
+doctors: ${specialty.doctors}
+_id: ${specialty._id}
+doctorsInSpecialty: /doctorsInSpecialty/${specialty.displayName.replace(/\s+/g,'').toLowerCase()}/
 ---`;       
 
-            const docInHosDrc = path.join(__dirname,`src/doctorsInHospital`)
-            if (!fs.existsSync(docInHosDrc)) {
-                fs.mkdirSync(docInHosDrc, { recursive: true });
+            const docInSpeDrc = path.join(__dirname,`src/doctorsInSpecialty`)
+            if (!fs.existsSync(docInSpeDrc)) {
+                fs.mkdirSync(docInSpeDrc, { recursive: true });
             }
-            const docInHosFilePath = path.join(docInHosDrc,`${hospital.name.replace(/\s+/g,'').toLowerCase()}.html`)
+            const docInSpeFilePath = path.join(docInSpeDrc,`${specialty.displayName.replace(/\s+/g,'').toLowerCase()}.html`)
 
-            if(!fs.existsSync(docInHosFilePath)){
+            if(!fs.existsSync(docInSpeFilePath)){
     
             let doctorList = ''
-            for(let i of hospitalDetails.doctorList){
+            for(let i of specialty.doctorList){
                 const data = `<div class="doctor-profile">
         <img src=" ${i.profileId?.profilePic}" alt="Doctor Image" width="150" height="180">
         <div class="doctor-details">
@@ -71,10 +63,10 @@ layout: template.html
     <div class="doctor-list">
         <div class="container max-w-3xl pt-5" style="margin-top: 150px;" >
 
-            <h1 class="font-bold" style="color: black; font-weight: 600;">${hospital.name}</h1>
+            <h1 class="font-bold" style="color: black; font-weight: 600;">${specialty.displayName}</h1>
         
         </div>
-    ${_.isEmpty(doctorList) ? "-- No Doctors --" : doctorList}
+    ${_.isEmpty(doctorList) ? "-- No Specialties --" : doctorList}
     </div>
 
     
@@ -149,15 +141,15 @@ layout: template.html
     </style>
 </div>
 `
-        fs.writeFileSync(docInHosFilePath,html.trim())
-        console.log(`Doctor In Hospital Created ${docInHosFilePath}`)
+        fs.writeFileSync(docInSpeFilePath,html.trim())
+        console.log(`Doctor In Specialty Created ${docInSpeFilePath}`)
 
         }
-            const fileName = `${hospital.name.replace(/\s+/g,'').toLowerCase()}_${hospital._id}.md`;
+            const fileName = `${specialty.displayName.replace(/\s+/g,'').toLowerCase()}_${specialty._id}.md`;
             const filePath = path.join(outputDir, fileName);
             if(!fs.existsSync(filePath)){
                 fs.writeFileSync(filePath, mdContent.trim());
-                console.log(`Hosptial Created ${filePath}`);
+                console.log(`Specialty Created ${filePath}`);
             }
         });
 }).catch(error => console.log(error))

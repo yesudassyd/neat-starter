@@ -45,6 +45,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('hospital', function(collectionApi){
     return collectionApi.getFilteredByGlob('src/hospital/**/*.md')
   })
+  eleventyConfig.addCollection('specialty', function(collectionApi){
+    return collectionApi.getFilteredByGlob('src/specialty/**/*.md')
+  })
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead

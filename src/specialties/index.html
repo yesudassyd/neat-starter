@@ -1,0 +1,96 @@
+---
+layout: template.html
+---
+
+<div class="container max-w-3xl " style="margin-top: 20px; margin-bottom: 100px;" >
+    <div class="specialty-list">
+        <div class="container max-w-3xl pt-5" style="margin-top: 100px; margin-bottom: 50px;" >
+
+            <h1 class="font-bold" style="color: black; font-weight: 600;">Our Specialties</h1>
+        
+        </div>
+        {% for specialty in collections.specialty %}
+        <div class="specialty-card">
+            <img src="{{ specialty.data.icon }}" alt="Pulmonologist">
+            <div class="specialty-info">
+                <h3>{{ specialty.data.name }}</h3>
+                <div class="specialty-details">
+                    <p>Available Specialties:<strong>{{ specialty.data.doctors }}</strong></p>
+                </div>
+                <a href="{{ specialty.data.doctorsInSpecialty }}" class="btn">View Specialties</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+        .specialty-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.specialty-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 20px;
+    align-items: center;
+}
+
+.specialty-card img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.specialty-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.specialty-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.specialty-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.specialty-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    bottom: -20px;
+    right: 20px;
+    position: absolute;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+    </style>
+</div>
