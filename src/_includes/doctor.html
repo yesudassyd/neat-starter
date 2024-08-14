@@ -35,9 +35,9 @@ layout: template.html
                 <div class="location-details-page">
                     <h4>{{ hospitalName }}</h4>
                     <div class="info">
-                        <p><span class="label">Experience of Years:  </span> {{ yearsOfExp }}</p>
+                        <p><span class="label">Experience of Years:  </span> {% if yearsOfExp != 'undefined'%} {{ yearsOfExp  }} {% else %} {% endif %}</p>
                         <p><span class="label">Available Location:  </span>{{ location }}</p>
-                        <p><span class="label">Contact Number:  </span>{{ contact }}</p>
+                        <p><span class="label">Contact Number:  </span>{% if contact != 'undefined'%} {{ contact  }} {% else %}  {% endif %}</p>
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@ fetch("https://prac360-dev.agamvanigam.com/v3/home/getall/hospitals")
             })
             const mdContent = 
 `---
-profilePic : ${hospital.logo}
+profilePic : ${_.isEmpty(hospital.logo) ? "https://firebasestorage.googleapis.com/v0/b/dr-appointment-booking-app.appspot.com/o/ForPrac360%2Flogo.jpeg?alt=media&token=2a711c2b-50d4-4a92-aedf-f873c8e05df3&_gl=1*6dobye*_ga*MjEwMTU2OTQ5NC4xNjY3NDYyMDE4*_ga_CW55HF8NVT*MTY5ODUxMjcwNS4yNjAuMS4xNjk4NTEyNzIyLjQzLjAuMA..String" : hospital.logo}
 name: ${hospital.name}
 details: ${hospital.details}
 location: ${hospital.areaId.name}
@@ -43,7 +43,7 @@ doctorsInHospital: /doctorsInHospital/${hospital.name.replace(/\s+/g,'').toLower
             let doctorList = ''
             for(let i of hospitalDetails.doctorList){
                 const data = `<div class="doctor-profile">
-        <img src=" ${i.profileId?.profilePic}" alt="Doctor Image" width="150" height="180">
+        <img src=" ${_.isEmpty(i.profileId?.profilePic) ? "https://firebasestorage.googleapis.com/v0/b/dr-appointment-booking-app.appspot.com/o/ForPrac360%2Flogo.jpeg?alt=media&token=2a711c2b-50d4-4a92-aedf-f873c8e05df3&_gl=1*6dobye*_ga*MjEwMTU2OTQ5NC4xNjY3NDYyMDE4*_ga_CW55HF8NVT*MTY5ODUxMjcwNS4yNjAuMS4xNjk4NTEyNzIyLjQzLjAuMA..String" : i.profileId?.profilePic}" alt="Doctor Image" width="150" height="180">
         <div class="doctor-details">
             <h2><strong>${i.profileId.name}</strong></h2>
             <p class="specialties"><strong>${i.specialties}</strong></p><br>

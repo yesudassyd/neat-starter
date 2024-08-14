@@ -1,21 +1,539 @@
 ---
-layout: default
-title: Neat Starter
-path: home
+layout: main
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
+<div class="specialties">
+    <div class="view-more">
+        <a href="../specialties/" class="view_specialty-btn me-3">Show All</a>
+    </div>
+    <div class="specialties-header">
+        <h2>Find Doctors Across all Specialties</h2>
+    </div>
+    <div class="specialties-list">
+        {% set specialty = collections.specialty %}
+        <div class="specialty-card">
+            <img src="{{ specialty[0].data.icon }}" alt="Pulmonologist">
+            <h3>{{ specialty[0].data.name | default('') }}</h3>
+            <span>{{ specialty[0].data.doctors }} Specialties</span>
+        </div>
+        <div class="specialty-card">
+            <img src="{{ specialty[1].data.icon }}" alt="Pulmonologist">
+            <h3>{{ specialty[1].data.name }}</h3>
+            <span>{{ specialty[1].data.doctors }} Specialties</span>
+        </div>
+        <div class="specialty-card">
+            <img src="{{ specialty[2].data.icon }}" alt="Pulmonologist">
+            <h3>{{ specialty[2].data.name }}</h3>
+            <span>{{ specialty[2].data.doctors }} Specialties</span>
+        </div>
+        <div class="specialty-card">
+            <img src="{{ specialty[3].data.icon }}" alt="Pulmonologist">
+            <h3>{{ specialty[3].data.name }}</h3>
+            <span>{{ specialty[3].data.doctors }} Specialties</span>
+        </div>
+        <div class="specialty-card">
+            <img src="{{ specialty[4].data.icon }}" alt="Pulmonologist">
+            <h3>{{ specialty[4].data.name }}</h3>
+            <span>{{ specialty[4].data.doctors }} Specialties</span>
+        </div>
+        <div class="specialty-card">
+            <img src="{{ specialty[5].data.icon }}" alt="Pulmonologist">
+            <h3>{{ specialty[5].data.name }}</h3>
+            <span>{{ specialty[5].data.doctors }} Specialties</span>
+        </div>
+    </div>
+</div>
 
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
+<div class="hospital">
+        <div class="view-more">
+            <a href="../hospitals/" class="view_hospital-btn me-3">Show All</a>
+        </div>
+        <div class="header">
+            <h2>Available Hospitals & Clinics</h2>
+        </div>
 
-  {% include "./_includes/partials/content.html" %}
+        <div class="hospital-grid">
+            {% set hospital = collections.hospital %}
+            <div class="hospital-card">
+                <img src="{{ hospital[0].data.profilePic }}" alt="Cutis Skin Care" class="hospital-image">
+                <div class="hospital-content">
+                    <h3 class="hospital-title">{{ hospital[0].data.name }}</h3>
+                    <p class="hospital-description">
+                        {{ hospital[0].data.details }}
+                    </p>
+                    <div class="hospital-location">
+                        <i class="fas fa-map-marker-alt">
+                        <span>{{ hospital[0].data.location }}</span>
+                    </div>
+                </div>
+                <div class="hospital-footer">
+                    <p><i class="fas fa-stethoscope"></i>{{ hospital[0].data.specialities }} Specialties</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[0].data.doctors }} Doctors</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[0].data.services }} Services</p>
+                </div>
+            </div>
+
+            <div class="hospital-card">
+                <img src="{{ hospital[1].data.profilePic }}" alt="Cutis Skin Care" class="hospital-image">
+                <div class="hospital-content">
+                    <h3 class="hospital-title">{{ hospital[1].data.name }}</h3>
+                    <p class="hospital-description">
+                        {{ hospital[1].data.details }}
+                    </p>
+                    <div class="hospital-location">
+                        <i class="fas fa-map-marker-alt">
+                        <span>{{ hospital[1].data.location }}</span>
+                    </div>
+                </div>
+                <div class="hospital-footer">
+                    <p><i class="fas fa-stethoscope"></i>{{ hospital[1].data.specialities }} Specialties</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[1].data.doctors }} Doctors</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[1].data.services }} Services</p>
+                </div>
+            </div>
+
+            <div class="hospital-card">
+                <img src="{{ hospital[2].data.profilePic }}" alt="Cutis Skin Care" class="hospital-image">
+                <div class="hospital-content">
+                    <h3 class="hospital-title">{{ hospital[2].data.name }}</h3>
+                    <p class="hospital-description">
+                        {{ hospital[2].data.details }}
+                    </p>
+                    <div class="hospital-location">
+                        <i class="fas fa-map-marker-alt">
+                        <span>{{ hospital[2].data.location }}</span>
+                    </div>
+                </div>
+                <div class="hospital-footer">
+                    <p><i class="fas fa-stethoscope"></i>{{ hospital[2].data.specialities }} Specialties</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[2].data.doctors }} Doctors</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[2].data.services }} Services</p>
+                </div>
+            </div>
+
+            <div class="hospital-card">
+                <img src="{{ hospital[3].data.profilePic }}" alt="Cutis Skin Care" class="hospital-image">
+                <div class="hospital-content">
+                    <h3 class="hospital-title">{{ hospital[3].data.name }}</h3>
+                    <p class="hospital-description">
+                        {{ hospital[3].data.details }}
+                    </p>
+                    <div class="hospital-location">
+                        <i class="fas fa-map-marker-alt">
+                        <span>{{ hospital[3].data.location }}</span>
+                    </div>
+                </div>
+                <div class="hospital-footer">
+                    <p><i class="fas fa-stethoscope"></i>{{ hospital[3].data.specialities }} Specialties</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[3].data.doctors }} Doctors</p>
+                        <p>|</p>
+                        <p><i class="fas fa-stethoscope"></i>{{ hospital[3].data.services }} Services</p>
+                </div>
+            </div>
+
+        </div>
+</div>
+    <div class="doctors-container">
+      <div class="view-more">
+        <a href="../doctors/" class="view_doctor-btn me-3">Show All</a>
+    </div>
+      <div class="header">
+          <h2>Available Doctors</h2>
+      </div>
+      <div class="doctors-grid">
+        {% set doctor = collections.doctor %}
+          <div class="doctor-card">
+              <img src="{{ doctor[0].data.profilePic }}">
+              <div class="doctor-info">
+                  <h3>{{ doctor[0].data.title }}</h3>
+                  <p>{{ doctor[0].data.specialties }}</p>
+                  <p><i class="fas fa-stethoscope"></i>{% if doctor[0].data.yearsOfExp != 'undefined'%} {{ doctor[0].data.yearsOfExp  }} {% else %}  {% endif %}Years of Experience</p>
+                  <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
+              </div>
+          </div>
+
+          <div class="doctor-card">
+            <img src="{{ doctor[1].data.profilePic }}">
+            <div class="doctor-info">
+                <h3>{{ doctor[1].data.title }}</h3>
+                <p>{{ doctor[1].data.specialties }}</p>
+                <p><i class="fas fa-stethoscope"></i>{% if doctor[1].data.yearsOfExp != 'undefined'%} {{ doctor[1].data.yearsOfExp  }} {% else %} 0 {% endif %} Years of Experience</p>
+                <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
+            </div>
+        </div>
+
+        <div class="doctor-card">
+            <img src="{{ doctor[2].data.profilePic }}">
+            <div class="doctor-info">
+                <h3>{{ doctor[2].data.title }}</h3>
+                <p>{{ doctor[2].data.specialties }}</p>
+                <p><i class="fas fa-stethoscope"></i>{% if doctor[2].data.yearsOfExp != 'undefined'%} {{ doctor[2].data.yearsOfExp  }} {% else %} 0 {% endif %} Years of Experience</p>
+                <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
+            </div>
+        </div>
+
+        <div class="doctor-card">
+            <img src="{{ doctor[3].data.profilePic }}">
+            <div class="doctor-info">
+                <h3>{{ doctor[3].data.title }}</h3>
+                <p>{{ doctor[3].data.specialties }}</p>
+                <p><i class="fas fa-stethoscope"></i>{% if doctor[3].data.yearsOfExp != 'undefined'%} {{ doctor[3].data.yearsOfExp  }} {% else %} 0 {% endif %}Years of Experience</p>
+                <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="btn">Book an Appointment</a>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <style>
+    .view_doctor-btn {
+    margin-left: 43%;
+  color: #fff;
+  background-color: #2f80ec;
+  
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+
+  }
+  .hospital .view-more .view_hospital-btn {
+    margin-left: 43%;
+  color: #fff;
+  background-color: #2f80ec;
+  
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+
+  }
+  .specialties .view-more .view_specialty-btn {
+    margin-left: 43%;
+  color: #fff;
+  background-color: #2f80ec;
+  
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+
+  }
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  }
+
+  .doctors-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      margin-bottom: 30px;
+  }
+
+  .header {
+      text-align: left;
+      margin-bottom: 20px;
+      margin-top: -30px;
+  }
+
+  .header h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  .header p {
+      color: #777;
+  }
+
+  .doctors-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap
+  }
+
+  .doctor-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 24%;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  .doctor-card img {
+      width: 100%;
+      height: 200px;
+      border-bottom: 1px solid #ddd;
+      object-fit: cover;
+  }
+
+  .doctor-info {
+      padding: 14px 0;
+      flex: 1;
+  }
+
+  .doctor-info h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+
+  .doctor-info p {
+      color: #777;
+      margin: 5px 0;
+  }
+
+  .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 10px;
+  }
+
+  .btn:hover {
+      background-color: #0056b3;
+  }
+
+  .view-more {
+      text-align: right;
+  }
+
+  .view-more a {
+      text-decoration: none;
+      font-weight: bold;
+  }
+
+  .view-more a i {
+      margin-left: 5px;
+  }
+
+  .view-more a:hover {
+      color: #0056b3;
+  }
+
+  .hospital {
+    font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin-bottom: 30px;
+        }
+
+        .hospital .header {
+            text-align: left;
+            margin-bottom: 20px;
+            margin-top: -30px;
+        }
+
+        .hospital .header h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .hospital .header p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .hospital .hospital-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hospital .hospital-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 24%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 380px;
+        }
+
+        .hospital .hospital-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .hospital .hospital-content {
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .hospital .hospital-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .hospital .hospital-specialty {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .hospital .hospital-description {
+            color: #555;
+            margin-bottom: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .hospital .hospital-location {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #555;
+            
+        }
+
+        .hospital .hospital-location span {
+            font-family: Arial, sans-serif;
+            margin-left: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .hospital .hospital-footer {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            background-color: #fff;
+            margin-top: auto;
+        }
+
+        .hospital .hospital-footer p {
+            color: #777;
+            margin: 5px 0;
+            font-size: small;
+        }
+
+        .hospital .view-more {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .hospital .view-more a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .hospital .view-more a:hover {
+            color: #0056b3;
+        }
+
+        .specialties {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.specialties-header {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+.specialties-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.specialties-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.specialty-card {
+    width: 90px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.specialty-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+.specialty-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.specialty-card span {
+    font-size: 14px;
+    color: #777;
+}
+
+.specialties-footer {
+    margin-top: 20px;
+}
+
+.specialties .view-more {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .specialties .view-more a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .specialties .view-more a:hover {
+            color: #0056b3;
+        }
+
+  </style>
+  

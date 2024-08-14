@@ -17,11 +17,11 @@ layout: template.html
             <a href="{{ doctor.url }}" class="view-profile">View Profile</a>
             <h2><strong>{{ doctor.data.title }}</strong></h2>
             <p class="specialties"><strong>{{ doctor.data.specialties }}</strong></p><br>
-            <p class="description"><small>{{ doctor.data.description }}</small></p>
+            <p class="description"><small>{% if doctor.data.description != 'undefined'%} {{ doctor.data.description  }} {% else %}  {% endif %}</small></p>
             <div class="info">
-                <p><span class="label">Experience of Years:</span> {{ doctor.data.yearsOfExp }}</p><br>
+                <p><span class="label">Experience of Years:</span> {% if doctor.data.yearsOfExp != 'undefined'%} {{ doctor.data.yearsOfExp  }} {% else %} {% endif %}</p><br>
                 <p><span class="label">Available Location:</span>{{ doctor.data.location }}</p><br>
-                <p><span class="label">Contact Number:</span>{{ doctor.data.contact }}</p><br>
+                <p><span class="label">Contact Number:</span>{% if doctor.data.contact != 'undefined'%} {{ doctor.data.contact  }} {% else %}  {% endif %}</p><br>
             </div>
             <div class="buttons">
                 <a href="https://play.google.com/store/apps/details?id=com.agamworks.prac360" class="book-appointment">Book an Appointment</a>
@@ -88,8 +88,12 @@ layout: template.html
             border-radius: 5px;
         }
         .view-profile {
-            float: right;
+            position: absolute;
+            right: 230px;
             color: #007bff;
+        }
+        .view-profile:hover {
+            text-decoration: underline;
         }
         .book-appointment {
             float: right;
